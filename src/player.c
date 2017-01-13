@@ -5,7 +5,7 @@
 #include "MapObject.h"
 #include "player.h"
 #include "GameState.h"
-#include "module.h"
+#include "utils.h"
 
 void initMan(Man *man) {
   man->dieSound = Mix_LoadWAV("files/audio/die.wav");

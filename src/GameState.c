@@ -5,7 +5,7 @@
 #include <time.h>
 #include "MapObject.h"
 #include "player.h"
-#include "module.h"
+#include "utils.h"
 #include "GameState.h"
 
 void updateManPosition(GameState *game)
