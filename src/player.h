@@ -7,11 +7,7 @@
 
 #ifndef _PLAYER_H
 #define _PLAYER_H
-#if defined (__APPLE__)
-  #include "SDL_mixer.h"
-#else
-  #include "SDL2/SDL_mixer.h"
-#endif
+#include "SDL_mixer.h"
 
 /**
 @struct Man

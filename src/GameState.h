@@ -8,11 +8,7 @@
 
 #ifndef _GAMESTATE_H
 #define _GAMESTATE_H
-#if defined (__APPLE__)
-	#include "SDL_mixer.h"
-#else
-	#include "SDL2/SDL_mixer.h"
-#endif
+#include "SDL_mixer.h"
 /**
 @struct GameState GameState.h
 @brief GameState: c'est le module central qui gère le chargement des niveaux, des éléments du décors, gère les collisions et réajuste les déplacements élémentaires dx, dy . C'est le noyau du jeu qui traite les informations reçus par les modules périphiriques, ce module est composé d'une structure de tableau de structures ou de structures, ce qui a rendu complexe l'integration des mutatteurs et poser des problèmes de dépendance cerculaire dans l'inclusion des fichier headers. Ayant réalisé ce fait trop tardivement nous n'avons pas pu respecter les modalitées de conceptions. Néanmoins nous avons mit un exemple de muttateur qui accéde au champ  d'une des case de structure appartenent à une structure. Enfin l'avantage de passer par cette structure regroupant les sous structures est de pouvoir comprendre plus facilement le code a mesure qu'on le produit.
