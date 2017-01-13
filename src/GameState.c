@@ -8,11 +8,6 @@
 #include "module.h"
 #include "GameState.h"
 
-int game_getLedgeX(GameState *game, int i)
-{
-  return Ledge_getX(&game->ledges[i]);
-}
-
 void updateManPosition(GameState *game)
 {
   //deplacement man
@@ -422,8 +417,7 @@ void collisionDetect(GameState *game)
   //verifie collision avec Ledges
   for(int i = 0; i < game->nbLedges; i++)
   {
-    float bx = game_getLedgeX(game,i), by = game->ledges[i].y, bw = game->ledges[i].w, bh = game->ledges[i].h; //game_getLedgeX(game,i)
-
+    float bx = game->ledges[i].x, by = game->ledges[i].y, bw = game->ledges[i].w, bh = game->ledges[i].h; 
 
     if(game->ledges[i].destroyed == 0)
     {

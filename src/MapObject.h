@@ -54,14 +54,4 @@ typedef struct
   int facingLeft;
 } Enemy;
 
-
-/**
- @fn  int Ledge_getX (Ledge * l);
- @brief game_getLedgeX:Accesseur à une structure legde
- @param [in, out] l pointeur sur ledge
- @return int
- */
-
-int Ledge_getX (Ledge * l);
-
 #endif
