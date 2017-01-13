@@ -34,7 +34,7 @@ int processEvents(GameState *game){
               done = 1;
               break;
             case SDLK_LSHIFT:
-              if(game->man.manDynamites>0) // 
+              if(game->man.manDynamites > 0) 
               {
                 game->dynamites[game->nbDynamites].x = game->man.x;
                 game->dynamites[game->nbDynamites].y = game->man.y;
@@ -52,7 +52,6 @@ int processEvents(GameState *game){
         }
         break;
       case SDL_QUIT:
-        //quitter le jeu
         done = 1;
         break;
     }
@@ -472,18 +471,7 @@ void destroyLevel(GameState *gameState){
 
 void destroySDL(GameState *gameState){
 
-  //Shutdown game and unload all memory
-  free(gameState->ledges);
-  free(gameState->ladders);
-  free(gameState->golds);
-  free(gameState->dynamites);
-  free(gameState->lava_blocks);
-  free(gameState->snake);
-
-
-  //SDL_DestroyTexture(gameState.star);
-  SDL_DestroyTexture(gameState->sheetTexture);
-  SDL_DestroyTexture(gameState->backgroundTexture);
+  destroyLevel(gameState);
 
   //SDL_DestroyTexture(gameState->blue_portalTexture);
   //SDL_DestroyTexture(gameState->orange_portalTexture);
